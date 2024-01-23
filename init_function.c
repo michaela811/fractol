@@ -53,3 +53,9 @@ void    init_function(t_fractol *fractol)
     events_inits(fractol);
     data_init(fractol);
 }
+
+void    error_message(void)
+{
+    perror("Malloc failure: \n");
+    exit(1);
+}

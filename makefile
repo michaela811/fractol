@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: mmasarov <marvin@42.fr>                    +#+  +:+       +#+         #
+#    By: codespace <codespace@student.42.fr>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/23 15:59:56 by mmasarov          #+#    #+#              #
-#    Updated: 2024/01/23 15:59:58 by mmasarov         ###   ########.fr        #
+#    Updated: 2024/01/23 17:20:56 by codespace        ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,6 +26,7 @@ SOURCES = init_function.c \
 			fractol.c \
 			math_functions.c \
 			render_functions.c \
+			events.c \
 
 OBJ = $(SOURCES:.c=.o)
 
@@ -35,7 +36,7 @@ all: $(NAME)
 	$(CC) $(CFLAGS) -o $@ -c $< -I.
 
 $(NAME): $(LIBFT) $(OBJ)
-		$(CC) $(CFLAGS) $(OBJ) -L$(LIBDIR) -lft -l$(MLX_NAME) -lXext -lX11 -lm
+		$(CC) $(CFLAGS) $(OBJ) -L$(LIBDIR) -lft -lXext -lX11 -l$(MLX_NAME) -lm -o $(NAME)
 
 $(LIBFT):
 		$(MAKE) -C $(LIBDIR) all
