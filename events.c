@@ -22,6 +22,9 @@ int key_handle(int keysym, t_fractol *fractol)
 
 int mouse_handle(int button, int x, int y, t_fractol *fractol)
 {
+    (void)x;
+    (void)y;
+        
     if (button == Button5)
         fractol -> zoom *= 0.95;
     else if (button == Button4)
