@@ -10,27 +10,29 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-double	ft_char_to_double(char *s)
+#include "libft.h"
+
+double	ft_atof(char *s)
 {
 	long	int_part;
 	double	float_part;
 	double	d;
 	int		minus;
 
-	int_part = 0;
-	float_part = 0;
-	minus = 0;
+	int_part = 0.0;
+	float_part = 0.0;
+	minus = 1;
 	d = 1;
 	while ((*s >= 9 && *s <= 13) || 32 == *s)
 		s++;
-	while (*s == '+' || *s == '-')
+	if (*s == '+' || *s == '-')
 		if (*s++ == '-')
 			minus = -1;
-	while (*s != '.' && *s)
-		int_part = (int_part * 10) + (*s++ - '0');
+	while (ft_isdigit(*s))
+		int_part = int_part * 10 + (*s++ - '0');
 	if (*s == '.')
 		++s;
-	while (*s)
+	while (ft_isdigit(*s))
 	{
 		d /= 10;
 		float_part = float_part + (*s++ - '0') * d;

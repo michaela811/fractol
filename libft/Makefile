@@ -50,7 +50,7 @@ SOURCES = ft_isdigit.c \
 		  ft_putnbr_fd.c \
 		  ft_isalpha.c \
 		  ft_strcmp.c \
-		  ft_char_to_double.c \
+		  ft_atof.c \
 
 OBJECT = $(SOURCES:.c=.o)
 all: $(NAME)

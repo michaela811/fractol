@@ -57,6 +57,6 @@ void	ft_putstr_fd(char *s, int fd);
 
 /* added functions */
 int		ft_strcmp(char *s1, char *s2);
-double	ft_char_to_double(char *s);
+double	ft_atof(char *s);
 
 #endif
