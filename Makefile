@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: mmasarov <marvin@42.fr>                    +#+  +:+       +#+         #
+#    By: codespace <codespace@student.42.fr>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/23 15:59:56 by mmasarov          #+#    #+#              #
-#    Updated: 2024/01/23 15:59:58 by mmasarov         ###   ########.fr        #
+#    Updated: 2024/01/23 17:20:56 by codespace        ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,12 +22,11 @@ LIBDIR = ./libft
 LIBFT_NAME = libft.a
 LIBFT = $(LIBDIR)/$(LIBFT_NAME)
 
-SOURCES = init_functions.c \
+SOURCES = init_function.c \
 			fractol.c \
 			math_functions.c \
-			pixel_functions.c \
-			mlx_functions.c \
-			error_functions.c \
+			render_functions.c \
+			events.c \
 
 OBJ = $(SOURCES:.c=.o)
 
